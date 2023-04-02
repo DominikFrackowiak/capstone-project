@@ -1,5 +1,6 @@
 import './Directory.styles.scss'
 import CategoryItem from '../category-item/CategoryItem'
+import { Outlet } from 'react-router-dom'
 
 export default function Directory({categories}) {
   return (
@@ -7,6 +8,8 @@ export default function Directory({categories}) {
 			{categories.map(category => (
 				<CategoryItem key={category.id} category={category} />
 			))}
+			
+			<Outlet/>
 		</div>
 	)
 }
