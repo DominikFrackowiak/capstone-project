@@ -5,13 +5,14 @@ import {
 	signInWithGoogleRedirect,
 } from '../../utils/firebase/firebase'
 
+import './Authentication.scss'
 
 import { getRedirectResult } from 'firebase/auth'
 
 import SignUpForm from '../../components/sign-up-form/SignUpForm'
+import SignInForm from '../../components/sign-in-form/SignInForm'
 
-const SignIn = () => {
-	
+const Authentication = () => {
 	const logGoogleUser = async () => {
 		const { user } = await signInWithGooglePopup()
 
@@ -19,12 +20,12 @@ const SignIn = () => {
 	}
 
 	return (
-		<>
-			<h1>Sign In Page</h1>
-			<button onClick={logGoogleUser}>Sign in with Google Popup</button>
+		<div className='authentication-container'>
+			
+			<SignInForm />
 			<SignUpForm />
-		</>
+		</div>
 	)
 }
 
-export default SignIn
+export default Authentication
