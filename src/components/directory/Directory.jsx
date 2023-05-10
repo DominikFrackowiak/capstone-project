@@ -1,15 +1,14 @@
-import './Directory.styles.scss'
 import CategoryItem from '../category-item/CategoryItem'
-import { Outlet } from 'react-router-dom'
+import './Directory.scss'
 
-export default function Directory({categories}) {
-  return (
-		<div className='directory-container'>
+const Directory = ({ categories }) => {
+	return (
+		<div className='categories-container'>
 			{categories.map(category => (
 				<CategoryItem key={category.id} category={category} />
 			))}
-			
-			<Outlet/>
 		</div>
 	)
 }
+
+export default Directory

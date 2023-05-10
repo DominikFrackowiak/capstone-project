@@ -1,16 +1,21 @@
-import './CategoryItem.style.scss'
+import './CategoryItem.scss'
 
-export default function CategoryItem({ category }) {
+const CategoryItem = ({ category }) => {
+
+	const { title, imageUrl } = category
+
 	return (
 		<div className='category-container'>
 			<div
 				className='background-image'
-				style={{ backgroundImage: `url(${category.imageUrl})` }}
+				style={{ backgroundImage: `url(${imageUrl})` }}
 			/>
 			<div className='category-body-container'>
-				<h2>{category.title}</h2>
-				<p>Shop Now</p>
+				<h2>{title}</h2>
+				<p>shop Now</p>
 			</div>
 		</div>
 	)
 }
+
+export default CategoryItem
