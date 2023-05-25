@@ -5,7 +5,7 @@ import CartIcon from '../cart-icon/CartIcon'
 import CartDropdown from '../cart-dropdown/CartDropdown'
 import './Navigation.scss'
 import { UserContext } from '../../contexts/UserContext'
-import { CartContext } from '../../contexts/cartContext'
+import { CartContext } from '../../contexts/CartContext'
 import { signOutUser } from '../../utils/firebase/firebaseConfig'
 
 const Navigation = () => {
